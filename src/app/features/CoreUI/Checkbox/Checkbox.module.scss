@@ -1,0 +1,43 @@
+@import '../variables';
+
+.checkbox {  
+  border: 1px solid $gray-300;  
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  
+  &:hover {
+    border-color: $gray-600;
+  }
+
+  &:focus {
+    border-color: $gray-600;
+  }
+
+  &.disabled {
+    border-color: $gray-300;    
+  }
+
+  &.checked {
+    border-color: $gray-600;
+    background-color: $blue-700; 
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+
+    &.disabled {
+      border-color: $gray-300;
+      background-color: $gray-300; 
+    }
+
+    &::after {
+      content: '✓';
+      font-size: $normal-font-size;        
+      color: white;
+    }
+  }
+}
+
+.input {  
+  display: none;  
+}

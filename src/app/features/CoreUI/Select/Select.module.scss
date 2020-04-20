@@ -1,0 +1,76 @@
+@import "../variables.scss";
+
+.container {
+  position: relative;    
+
+  .select {
+    height: 40px;
+    min-width: 200px;
+    padding: 0px 20px;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: space-between;
+    background-color: $gray-100;
+    border-radius: 4px;    
+    border: 1px solid $gray-300;
+
+    &:hover {
+      border-color: $blue-300;      
+    }
+
+    .placeholder {
+      color: $gray-300;      
+      cursor: default;
+    }
+    .value {
+      color: $gray-700;
+    }
+
+    .arrow {
+      display: flex;      
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }    
+  }  
+
+  ul {    
+    padding: 0px;
+    margin-top: 10px;
+    border: 1px solid $gray-200;
+    border-radius: 5px;    
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+    background-color: white;
+
+    li {
+      padding: 10px;
+      list-style-type: none;
+      border-bottom: 1px solid $gray-200;      
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $gray-100;
+      }
+
+      .itemLabel {
+        font-size: 14px;
+        color: $gray-700;
+        padding: 0px 10px; 
+        cursor: default;
+
+        &.del {
+          color: $red-700;
+        }
+      }
+    }  
+    
+    li.selected {
+      background-color: $blue-100;
+    }
+  }
+}

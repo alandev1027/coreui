@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { normal as NormalForm } from "../../CoreUI/Form/Form.stories";
 import './Root.scss';
 
 const Root: React.FC = () => (
-  <div>Hello World...</div>
+  <NormalForm />
 );
 
 export default Root;
